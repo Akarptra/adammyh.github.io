@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+    <div>
+        <img src="pemudapp.png" style="width:100%">
+    </div>
+
+    <div class="w3-bar w3-orange">
+        <button class="w3-bar-item w3-button" onclick="openKota('Home')">Home</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Top')">NISAN GTR</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Zoom')">SPONGEBOB</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Fading')">GANGSTER RAP</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Spin')">ESCOBAR</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Left')">MOBIL SUPRA</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Right')">ADAM</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Bottom')">RAKA</button>
+        <button class="w3-bar-item w3-button" onclick="openKota('Opacity')">NARUTO</button>
+
+        <!- Membuat dropdown menu ->
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">Animasi</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <button class="w3-bar-item w3-button" onclick="openKota('Home')">Home</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Top')">NISAN GTR</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Zoom')">SPONGEBOB</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Fading')">GANGSTER RAP</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Spin')">ESCOBAR</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Left')">MOBIL SUPRA</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Right')">ADAM</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Bottom')">RAKA</button>
+                <button class="w3-bar-item w3-button" onclick="openKota('Opacity')">NARUTO</button>
+           </div>
+        </div>
+        <!- End dropdown menu ->
+
+    </div>
+
+    <div id="Home" class="w3-container kota w3-center w3-animate-fading" style="display:block">
+        <h1>Welcome</h1>
+        <img src="logopp.png" style="width:40%">
+    </div>
+<center>
+    <div id="Zoom" class="w3-container kota w3-animate-zoom" style="display:none">
+        <h2>SPONGEBOB</h2>
+        <P>Spongebob adalah karakter kartun anak2 yang sangat di minati semua kalangan anak-anak 
+            spongebob di zaman dulu sampai saat ini masih ada dan selalu di tonton oleh semua orang
+        </P>
+        <img src="spongebob.jpg" style="width:50%">
+    </div>
+
+    <div id="Top" class="w3-container kota w3-animate-top" style="display:none">
+        <center>
+            <h1>Mobil nissan gtr</h1>
+            <p>Mobil nissan gtr adalah mobil favorite saya, dan cita-cita saya kalau sukses akan membeli mobil ini</p>
+            <img src="nisangtr.jpg" style="width:50%">
+        </div>
+
+        <div id="Fading" class="w3-container kota w3-animate-fading " style="display:none">
+            <h2>Gangster rap</h2>
+            <p> gangsteer rap adalah orang kece dengan bernyanyi dengan irama cepat di sukai dengan kalangan rapper penampilannya
+                sangat mencolok untuk di lihat
+            </p>
+            <img src="gangsteer.jpg" style="width:50%">
+        </div>
+
+        <div id="Spin" class="w3-container kota w3-spin " style="display:none">
+            <h2>ECOBAR</h2>
+            <p>escobar adalah sosok orang yang berpengaruh karena usaha yang melimpah dengan kekayaan triliunan
+                karena dia di peroleh oleh bisnis narkoba
+            </p>
+            <img src="escobar.jpg" style="width:50%">
+        </div>
+
+        <div id="Left" class="w3-container kota w3-animate-left" style="display:none">
+            <h2>MOBIL SUPRA</h2>
+            <p>nah mobil supra adalah mobil di terkenal di kalangan para skyline balap mobil
+                mobil ini sangat cepat dan harga nya sangat mahal.mobil ini ada di film fast and forius
+            </p>
+            <img src="supra.jpg" style="width:50%">
+        </div>
+
+        <div id="Right" class="w3-container kota w3-animate-right" style="display:none">
+            <h2>Adam</h2>
+            <p>Adam adalah saya itu hanya editan semata dengan berkostum pemuda pancasila</p>
+            <img src="adam.jpg" style="width:50%">
+        </div>
+
+        <div id="Bottom" class="w3-container kota w3-animate-bottom" style="display:none">
+            <h2>Raka</h2>
+            <p>Raka adalah teman saya itu hanya editan semata dengan berkostum pemuda pancasila</p>
+            <img src="raka.jpg" style="width:50%">
+        </div>
+
+        <div id="Opacity" class="w3-container kota w3-animate-opacity" style="display:none">
+            <h2>Naruto</h2>
+            <p>Karakter anime yang sangat populer di kalangan dunia karena alur cerita yang sangat menarik
+                naruto adalah tontonan anak-anak,orang dewasa, dan remaja
+            </p>
+            <img src="Naruto.jpg" style="width:50%">
+        </div>
+
+    <script>
+        function openKota(namakota) {
+            var i;
+            var x = document.getElementsByClassName("kota");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(namakota).style.display = "block";
+        }
+    </script>
+</body>
+</html>
